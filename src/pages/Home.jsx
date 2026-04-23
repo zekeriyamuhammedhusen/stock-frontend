@@ -88,12 +88,13 @@
             <h2 className="text-3xl font-bold text-slate-900 mb-2">Sign In</h2>
             <p className="text-sm text-slate-600 mb-7">Enter your registered email and password to continue.</p>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5" autoComplete="off">
                 <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
                 <input
                     type="email"
                     name="email"
+                    autoComplete="off"
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -109,6 +110,7 @@
                     ref={passwordInputRef}
                     type={showPassword ? 'text' : 'password'}
                     name="password"
+                    autoComplete="new-password"
                     value={formData.password}
                     onChange={handleChange}
                     required
