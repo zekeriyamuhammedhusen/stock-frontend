@@ -140,8 +140,11 @@
                 <Link to="/forgot-password" className="text-cyan-700 hover:text-cyan-900 font-semibold">
                     Forgot password?
                 </Link>
+               
                 </div>
             </form>
+             <p>email:zakm01163@gmail.com</p>
+                <p>password:Admin@me12</p>
             </div>
         </div>
         </div>
