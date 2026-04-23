@@ -8,8 +8,15 @@
         touchSessionActivity,
     } from '../utils/sessionTimeout';
 
+    const rawApiBaseUrl = String(import.meta.env.VITE_API_BASE_URL || '').trim();
+    const normalizedApiBaseUrl = rawApiBaseUrl
+        ? (rawApiBaseUrl.endsWith('/api')
+            ? rawApiBaseUrl
+            : `${rawApiBaseUrl.replace(/\/+$/, '')}/api`)
+        : 'http://localhost:5000/api';
+
     const api = axios.create({
-    baseURL: import.meta.env.VITE_API_BASE_URL ,
+    baseURL: normalizedApiBaseUrl,
     headers: { 'Content-Type': 'application/json' },
     });
 
